@@ -1,0 +1,34 @@
+---
+
+- hosts: all
+  become: true
+  vars:
+    ansible_remote_tmp: /tmp
+   
+
+  tasks:
+   
+    - name: Update APT cache
+      ansible.builtin.apt:
+        update_cache: yes
+    - name: Install Nginx
+      ansible.builtin.apt:
+        name: nginx
+        state: present
+    - name: Start and enable Nginx service
+      ansible.builtin.systemd:
+        name: nginx
+        enabled: yes
+        state: started
+
+    - name: Copy custom Nginx configuration
+      copy:
+        src: nginx.conf
+        dest: /etc/nginx/nginx.conf
+        mode: '0644'
+  
+   
+    - name: Restart Nginx to apply configuration
+      ansible.builtin.systemd:
+        name: nginx
+        state: restarted
