@@ -1,0 +1,1 @@
+# docker_ami_aws
