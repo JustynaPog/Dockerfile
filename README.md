@@ -8,18 +8,18 @@ This repository contains a Dockerfile designed to create a Docker image with a p
 
 ## Building the Docker Image
 
-- Clone this repository:
+ 1.Clone this repository:
  
-`git clone <repository-url>`  
+  `git clone <repository-url>`  
 
-`cd <repository-directory>`
+  `cd <repository-directory>`
 - Build the Docker image
 
-`docker build -t ubuntu-ansible-packer .`
+  `docker build -t ubuntu-ansible-packer .`
 
 ## Running the Container
 
-`docker run -it ubuntu-ansible-packer`  
+  `docker run -it ubuntu-ansible-packer`  
 ## Use Cases
 This image can be used for:
 - Testing and developing Ansible playbooks.
