@@ -8,5 +8,5 @@ This repository contains a Dockerfile designed to create a Docker image with a p
 
 ## Building the Docker Image
 - Clone this repository:  
-`git clone <repository-url>
+`git clone <repository-url>  
 cd <repository-directory>`
